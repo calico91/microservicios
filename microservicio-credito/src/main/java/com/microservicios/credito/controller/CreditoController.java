@@ -27,13 +27,13 @@ public class CreditoController {
         return ResponseEntity.ok(creditoService.consultarCreditos());
     }
 
-    @GetMapping("consultar-credito")
-    public ResponseEntity<Credito> consultarCredito(Integer idCredito) {
+    @GetMapping("consultar-credito/{idCredito}")
+    public ResponseEntity<Credito> consultarCredito(@PathVariable Integer idCredito) {
         return ResponseEntity.ok(creditoService.consultarCredito(idCredito));
     }
 
-    @GetMapping("consultar-creditos-cliente")
-    public ResponseEntity<List<Credito>> consultarCreditosCliente(Integer idCliente) {
+    @GetMapping("consultar-creditos-cliente/{idCliente}")
+    public ResponseEntity<List<Credito>> consultarCreditosCliente(@PathVariable Integer idCliente) {
         return ResponseEntity.ok(creditoService.consultarCreditosCliente(idCliente));
     }
 

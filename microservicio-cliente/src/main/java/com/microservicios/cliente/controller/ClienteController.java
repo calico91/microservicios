@@ -1,5 +1,6 @@
 package com.microservicios.cliente.controller;
 
+import com.microservicios.cliente.http.response.CreditosClienteResponse;
 import com.microservicios.cliente.model.Cliente;
 import com.microservicios.cliente.service.ClienteService;
 import lombok.AllArgsConstructor;
@@ -32,5 +33,9 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.consultarCliente(idCliente));
     }
 
+    @GetMapping("consultar-creditos-cliente/{idCliente}")
+    public ResponseEntity<CreditosClienteResponse> consultarCreditosCliente(@PathVariable Integer idCliente) {
+        return ResponseEntity.ok(clienteService.consultarCreditosCliente(idCliente));
+    }
 
 }
