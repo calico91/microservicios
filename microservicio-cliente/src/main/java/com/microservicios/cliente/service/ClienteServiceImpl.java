@@ -1,7 +1,6 @@
 package com.microservicios.cliente.service;
 
-import com.microservicios.cliente.client.CreditoFeingClient;
-import com.microservicios.cliente.dto.CreditoDTO;
+import com.microservicios.cliente.clientFeing.CreditoFeingClient;
 import com.microservicios.cliente.http.response.CreditosClienteResponse;
 import com.microservicios.cliente.model.Cliente;
 import com.microservicios.cliente.repository.ClienteRepository;

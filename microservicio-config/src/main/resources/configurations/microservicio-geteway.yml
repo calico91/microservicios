@@ -1,0 +1,33 @@
+eureka:
+  client:
+    register-with-eureka: false
+
+server:
+  port: 8079
+
+spring:
+  application:
+    name: microservicio-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: cliente
+          uri: http://localhost:8096
+          predicates:
+            - Path=/api/cliente/**
+
+        - id: credito
+          uri: http://localhost:8095
+          predicates:
+            - Path=/api/credito/**
+
+
+
+
+
+
+
+
